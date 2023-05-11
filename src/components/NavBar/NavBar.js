@@ -7,7 +7,7 @@ export default function NavBar({ user, setUser }) {
 
   function handleLogOut() {
     userService.logOut(); // this removes the token from local storage
-    setUser(user); // nullify our user state
+    setUser(null); // nullify our user state
   }
 
   return (

@@ -1,5 +1,9 @@
 import * as userAPI from './users-api';
 
+export function logOut() {
+    localStorage.removeItem('token');
+};
+
 export async function signUp(userData) {
     const token = await userAPI.signUp(userData);
     localStorage.setItem('token', token);
